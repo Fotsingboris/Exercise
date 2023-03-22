@@ -8,7 +8,7 @@
             <div class="pull-left">
                 <h2> Edit Product</h2>
             </div><div class="pull-left">
-                <a class="btn btn-primary" href="{{ route(students.index) }}">Backt</a>
+                <a class="btn btn-primary" href="{{ route('students.index') }}">Backt</a>
             </div>
         </div>
     </div>
@@ -26,6 +26,7 @@
 
     <form action="{{ route('students.update', $student->id) }}" method="POST">
         @csrf
+        @method('PUT')
         <div class=row>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">

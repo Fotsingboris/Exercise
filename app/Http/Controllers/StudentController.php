@@ -52,7 +52,7 @@ class StudentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(student $student)
+    public function edit(Student $student)
     {
         return view('students.edit',compact('student'));
 
@@ -61,7 +61,7 @@ class StudentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, student $student)
+    public function update(Request $request, Student $student)
     {
         $request->validate([
             
@@ -75,7 +75,7 @@ class StudentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(student $student)
+    public function destroy(Student $student)
     {
         $student->delete();
         return redirect()->route('students.index')
